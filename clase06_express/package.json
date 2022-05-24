@@ -1,0 +1,14 @@
+{
+  "name": "clase06_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server_express.js",
+  "scripts": {
+    "start": "node server_express.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
