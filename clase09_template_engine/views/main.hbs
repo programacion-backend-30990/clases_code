@@ -1,0 +1,11 @@
+<h2> Lista de productos </h2>
+
+{{#if listExists}}
+
+    <ul>
+        {{#each products }}
+            <li>{{this.name}}, $ {{this.price}}</li>
+        {{/each}}
+    </ul>
+
+{{/if}}
