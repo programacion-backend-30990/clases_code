@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="name" name="name">
+        <input id="price" name="price">
+
+        <button id="load">Cargar</button>
+    </form>
+    <div id="products"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const btn = document.getElementById('load')
+        const socket = io()
+
+        btn.onclick = e => {
+            e.preventDefault() 
+
+            const name = document.getElementById("name").value
+            const price = document.getElementById("price").value
+
+            socket.emit('add', {name, price})
+        }
+
+        
+        socket.on('show', data => {
+            console.log('Show data')
+            fetch('/products')
+                .then(r => r.text())
+                .then(html => {
+                    const div = document.getElementById("products")
+                    div.innerHTML = html
+                })
+                .catch(e => alert(e))
+        })
+
+        
+    </script>
+</body>
+</html>
