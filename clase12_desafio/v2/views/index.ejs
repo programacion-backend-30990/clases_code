@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="username"></h2>
+    <hr>
+    <form>
+        <input id="name" name="name">
+        <input id="price" name="price">
+
+        <button id="load">Cargar</button>
+    </form>
+    <div id="products"></div>
+
+    <div id="chat"></div>
+    <div>
+        <form>
+            <input id="msn" name="msn">
+            <button id="send">Enviar</button>
+        </form>
+    </div>
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/index.js"></script>
+</body>
+</html>

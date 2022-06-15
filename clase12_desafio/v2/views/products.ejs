@@ -1,0 +1,20 @@
+<table style="border: 1px solid black">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Username</th>
+    </tr>
+    <% products.forEach(product=> { %>
+        <tr>
+            <td>
+                <%= product.name %>
+            </td>
+            <td>
+                <%= product.price %>
+            </td>
+            <td>
+                <%= product.username %>
+            </td>
+        </tr>
+        <% }) %>
+</table>
