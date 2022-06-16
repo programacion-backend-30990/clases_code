@@ -1,0 +1,1 @@
+setTimeout((()=>{console.log("Saludos a mi amigo Joaquin Boto")}),1e3),setTimeout((()=>{console.log("Saludos a nuestro Tutor Diego")}),2e3),setTimeout((()=>{console.log("Webpack ni crea, ni edita. Solo crean un nuevo archivo")}),3e3);

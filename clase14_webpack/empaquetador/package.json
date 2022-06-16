@@ -1,0 +1,19 @@
+{
+  "name": "empaquetador",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack ./a1.js ./a2.js ./a3.js ./a4.js --mode=production",
+    "build-dev": "webpack ./a1.js ./a2.js ./a3.js ./a4.js --mode=development",
+    "build-msn": "webpack ./mensaje1.js ./mensaje2.js ./mensaje3.js --mode=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
