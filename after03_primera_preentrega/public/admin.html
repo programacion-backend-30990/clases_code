@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Admin</h1>
+    <form action="/products" method="POST">
+        <label for="title">Nombre del producto</label>
+        <input type="text" name="title">
+
+        <br> <label for="price">Precio del producto</label> <input type="number" name="price"><br> <label
+            for="thumbnail">Url del producto</label> <input type="text" name="thumbnail"><br> <label
+            for="thumbnail">Descripción</label> <input type="text" name="description"><br> <label
+            for="thumbnail">Código</label> <input type="text" name="code"><br> <label for="thumbnail">Stock</label>
+        <input type="number" name="stock">
+        
+        <br>
+        
+        <input type="submit" id="insert">
+    </form>
+
+    <script>
+        document.getElementById('insert').onclick = (e) => {
+            
+        }
+    </script>
+</body>
+
+</html>
