@@ -1,0 +1,16 @@
+{
+  "name": "clase20_mongoatlas_firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "connect1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^11.0.0",
+    "mongoose": "^6.4.3"
+  }
+}
