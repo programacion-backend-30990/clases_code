@@ -4,7 +4,7 @@ const ProductModel = require('../../model/product.model')
 class ProductMongoDAO extends ContenedorMongo {
     
     constructor() {
-        super('mongodb://localhost/productos', ProductModel)
+        super(ProductModel)
     }
 
 }

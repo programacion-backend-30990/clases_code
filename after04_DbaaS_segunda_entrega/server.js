@@ -1,8 +1,11 @@
 const express = require('express')
+const mongoose = require('mongoose');
 
 const FactoryDAO = require('./daos/index')
 
 const app = express()
+
+
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
@@ -14,4 +17,13 @@ app.post('/products', async (req, res) => res.send(await DAO.product.save(req.bo
 app.get('/cart', async (req, res) => res.send(await DAO.cart.getAll()))
 app.post('/cart', async (req, res) => res.send(await DAO.cart.save(req.body)))
 
-app.listen(8080)
+mongoose.connect('mongodb://localhost/productos', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+})
+    .then(db => {
+        console.log(`DB is connected`)
+        server = app.listen(8080, () => console.log('Server running...'))
+    })
+    .catch(err => console.log(err));
+

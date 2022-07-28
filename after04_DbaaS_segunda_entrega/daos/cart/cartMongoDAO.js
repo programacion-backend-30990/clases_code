@@ -4,7 +4,7 @@ const CartModel = require('../../model/cart.model')
 class CartMongoDAO extends ContenedorMongo {
     
     constructor() {
-        super('mongodb://localhost/productos', CartModel)
+        super(CartModel)
     }
 
 }

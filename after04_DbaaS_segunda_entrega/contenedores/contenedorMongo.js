@@ -1,16 +1,9 @@
-const mongoose = require('mongoose');
 const ObjectId = require('mongoose').Types.ObjectId; 
 
 class ContenedorMongo {
 
     constructor(uri, model) {
         this.model = model
-        this.mongo = mongoose.connect(uri, {
-            useUnifiedTopology: true,
-            useNewUrlParser: true,
-        })
-            .then(db => console.log(`DB is connected`))
-            .catch(err => console.log(err));
     }
 
     async save(obj) {
