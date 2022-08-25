@@ -6,7 +6,7 @@ class ApiUserMock extends ContenedorMemoria {
         super()
     }
     
-    populate(cant = 5) {
+    populate(cant = 5) { 
         const news = []
         for (let i = 0; i < cant; i++) {
             const newUser = this.generateUser()
