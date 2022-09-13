@@ -1,0 +1,12 @@
+{
+  "name": "@arturoverbel/suma22",
+  "version": "1.0.0",
+  "description": "Suma dos numeros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "R2",
+  "keywords": ["suma"],
+  "license": "ISC"
+}
