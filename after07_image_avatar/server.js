@@ -1,6 +1,6 @@
 const express = require('express')
 const connectMongo = require('./config/db.mongo')
-const fileUpload = require('express-fileupload');
+
 
 const routerProduct = require('./router/products.router')
 const routerUser = require('./router/user.router')
