@@ -23,4 +23,3 @@ console.log( process.memoryUsage() )
 
 console.log( process.execPath )
 process.stdout.write('asdasdasd')
-// Volvemos a las 21:15 pm =D Node Rules!!
