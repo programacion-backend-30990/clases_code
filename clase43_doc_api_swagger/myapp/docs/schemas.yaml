@@ -1,0 +1,101 @@
+components:
+  schemas:
+    Product:
+      type: object
+      required:
+        - id
+        - title
+        - price
+        - thumbnail
+      properties:
+        id:
+          type: string
+          description: Auto-generated id
+        title:
+          type: string
+          description: Title of product
+        price:
+          type: number
+          description: Price of product
+        thumbnail:
+          type: string
+          description: URL image product
+      example:
+        id: 1212312nlkasdf
+        title: Helado de Vainilla
+        price: 120.2
+        thumbnail: http://photo.url.png
+  requestBodies:
+    NewProduct:
+      type: object
+      required:
+        - title
+        - price
+        - thumbnail
+      properties:
+        id:
+          type: string
+          description: Auto-generated id
+        title:
+          type: string
+          description: Title of product
+        price:
+          type: number
+          description: Price of product
+        thumbnail:
+          type: string
+          description: URL image product
+      example:
+        title: Helado de Vainilla
+        price: 120.2
+        thumbnail: http://photo.url.png
+paths:
+  /products:
+    post:
+      summary: Create new product
+      tags:
+        - product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/NewProduct'
+      response:
+        "201":
+          description: Product created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    get:
+      summary: Gets products
+      tags:
+        - products
+      responses:
+        "200":
+          description: Products
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+  /product/{id}:
+    get:
+      summary: Get one product
+      tags:
+        - products
+      parameters:
+        - in: path
+          name: id
+          description: path parameter teke the prodcud ID
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Product with ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "404":
+          description: Product not fount
