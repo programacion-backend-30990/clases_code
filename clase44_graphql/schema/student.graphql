@@ -1,0 +1,6 @@
+
+type Student {
+    id: ID!
+    name: String,
+    age: Int
+}
